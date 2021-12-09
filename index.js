@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { execa } from "execa";
 import { Listr } from "listr2";
 import dotenv from "dotenv";
