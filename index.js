@@ -5,7 +5,7 @@ import { Listr } from "listr2";
 import dotenv from "dotenv";
 
 dotenv.config();
-const { AWS_USERNAME, AWS_ACCOUNT_NAME, AWS_ACCOUNT_ID } = process.env;
+const { AWS_USERNAME, AWS_ACCOUNT_ID } = process.env;
 
 const tasks = new Listr(
   [
@@ -14,7 +14,7 @@ const tasks = new Listr(
       task: async (ctx, task) => {
         ctx.token = await task.prompt({
           type: "input",
-          message: `Authenticator Token (${AWS_USERNAME}@${AWS_ACCOUNT_NAME})`,
+          message: `Authenticator Token (${AWS_USERNAME}@${AWS_ACCOUNT_ID})`,
         });
         if (ctx.token === false) {
           throw new Error(":/");
