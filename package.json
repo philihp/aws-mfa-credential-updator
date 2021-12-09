@@ -1,10 +1,11 @@
 {
   "name": "aws-2fa-credential-updator",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "exit 0"
   },
   "author": "Philihp Busby <philihp@gmail.com>",
   "license": "MIT",
